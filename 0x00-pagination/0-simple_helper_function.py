@@ -2,13 +2,24 @@
 """ Simple helper function
 """
 
+
 def index_range(page, page_size):
+    ''''a function named index_range that takes two
+    integer arguments page and page_size.
+
+The function should return a tuple of size two containing
+a start index and an end index corresponding to the range
+of indexes to return in
+a list for those particular pagination parameters.
+
+Page numbers are 1-indexed, i.e. the first page is page 1.
+'''
     start_idx = 0
     end_idx = 0
     for _ in range(page):
         start_idx = end_idx
         end_idx += page_size
-    return(start_idx, end_idx)
+    return (start_idx, end_idx)
 
 
 if __name__ == "__main__":
