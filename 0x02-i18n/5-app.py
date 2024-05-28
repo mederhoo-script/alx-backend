@@ -35,8 +35,8 @@ babel = Babel(app)
 
 def get_user():
     """
-    Returns a user dictionary or None if ID value can't be found
-    or if 'login_as' URL parameter was not found
+    Returns a user dictionary or None
+    if ID value can't be found
     """
     id = request.args.get('login_as', None)
     if id is not None and int(id) in users.keys():
